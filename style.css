@@ -1,40 +1,50 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* VARIÁVEIS */
+/* =========================
+   VARIÁVEIS
+========================= */
 :root {
-  --bg-main: #0e0b16;
-  --bg-dark: #151125;
-  --text-main: #e8e6e3;
-  --text-muted: #b6b3c2;
-  --accent: #c9a24d;
+  --bg-principal: #0e0b16;
+  --bg-escuro: #151125;
+  --texto-principal: #e8e6e3;
+  --texto-suave: #b6b3c2;
+  --destaque: #c9a24d;
 }
 
-/* BASE */
+/* =========================
+   BASE
+========================= */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Cinzel', serif;
   letter-spacing: 1px;
 }
 
 h2 {
   margin-bottom: 1rem;
-  color: var(--accent);
+  color: var(--destaque);
   text-align: center;
 }
 
-/* HERO */
-.hero {
+/* =========================
+   DESTAQUE (HERO)
+========================= */
+.destaque {
   min-height: 100vh;
   background: radial-gradient(circle at top, #1f1b3a, #0e0b16);
   display: flex;
@@ -44,143 +54,40 @@ h2 {
   padding: 2rem;
 }
 
-.site-name {
-  font-family: 'Cinzel', serif;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  text-shadow: 0 0 8px rgba(201, 162, 77, 0.35);
-
-}
-
-.hero-content h1 {
+.conteudo-destaque h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-content h1 span {
-  color: var(--accent);
+.conteudo-destaque h1 span {
+  color: var(--destaque);
 }
 
-.hero-content p {
-  color: var(--text-muted);
+.conteudo-destaque p {
+  color: var(--texto-suave);
   max-width: 500px;
   margin: 0 auto 2rem;
 }
 
-/* SEÇÕES */
-.section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.bg-dark {
-  background-color: var(--bg-dark);
-  max-width: 100%;
-}
-
-/* BOTÕES */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.8rem;
-  background-color: var(--accent);
-  color: #000;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background-color: #1b1633;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-.card h3 {
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.card p {
-  color: var(--text-muted);
-}
-
-/* PASSOS */
-.steps {
-  list-style: none;
-  max-width: 600px;
-  margin: 2rem auto 0;
-}
-
-.steps li {
-  padding: 1rem;
-  border-left: 2px solid var(--accent);
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-  color: var(--text-muted);
-}
-
-/* BOTÃO CENTRALIZADO NA SEÇÃO CONTATO */
-.contact-btn {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.signature {
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-/* ANIMAÇÃO DO NOME DO SITE */
-.site-name {
+/* =========================
+   NOME DO SITE (ANIMAÇÃO)
+========================= */
+.nome-site {
   font-family: 'Cinzel', serif;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--destaque);
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
+  text-shadow: 0 0 8px rgba(201, 162, 77, 0.35);
 
   opacity: 0;
   transform: translateY(10px);
-  animation: revealName 1.8s ease-out forwards;
+  animation: revelar-nome 1.8s ease-out forwards;
   animation-delay: 0.4s;
 }
 
-/* KEYFRAMES */
-@keyframes revealName {
+@keyframes revelar-nome {
   0% {
     opacity: 0;
     transform: translateY(12px);
@@ -196,3 +103,123 @@ h2 {
   }
 }
 
+/* =========================
+   SEÇÕES
+========================= */
+.secao {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.fundo-escuro {
+  background-color: var(--bg-escuro);
+  max-width: 100%;
+}
+
+.introducao-secao {
+  text-align: center;
+  color: var(--texto-suave);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+.botao {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: var(--destaque);
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.botao-contorno {
+  background: transparent;
+  border: 1px solid var(--destaque);
+  color: var(--destaque);
+}
+
+/* =========================
+   CARDS
+========================= */
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #1b1633;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--destaque);
+}
+
+.card p {
+  color: var(--texto-suave);
+}
+
+/* =========================
+   PASSOS (COMO FUNCIONA)
+========================= */
+.passos {
+  list-style: none;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+.passos li {
+  padding: 1rem;
+  border-left: 2px solid var(--destaque);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: var(--texto-suave);
+}
+
+/* =========================
+   CONTATO
+========================= */
+.texto-contato {
+  text-align: center;
+  color: var(--texto-suave);
+  max-width: 700px;
+  margin: 0 auto;
+  margin: 0 auto 1.5rem;
+}
+
+.botao-contato {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+.rodape {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.assinatura {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
